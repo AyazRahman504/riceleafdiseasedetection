@@ -7,3 +7,5 @@ numpy
 Pillow
 ultralytics
 plotly==5.15.0
+st-aggrid==0.3.3
+decouple
