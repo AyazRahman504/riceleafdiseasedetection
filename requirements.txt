@@ -6,4 +6,4 @@ scikit-learn
 numpy
 Pillow
 ultralytics
-ploty
+plotly==5.15.0
