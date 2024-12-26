@@ -8,4 +8,4 @@ Pillow
 ultralytics
 plotly==5.15.0
 streamlit-aggrid
-decouple
+python-decouple
