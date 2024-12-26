@@ -12,6 +12,7 @@ import plotly.express as px
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
+os.environ['STREAMLIT_SERVER_PORT'] = '8501'
 
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
