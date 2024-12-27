@@ -420,9 +420,9 @@ def get_table_download_link(df):
 
 # Dictionary of YOLO model paths
 model_paths = {
-    "YOLOv8.pt": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/YOLOv8Best.pt",
-    "YOLOv10.pt": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/YOLOv10Best.pt",
-    "YOLOv11.pt": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/YOLOv11Best.pt",
+    "YOLOv8.pt": r"Models/Models/YOLOv8Best.pt",
+    "YOLOv10.pt": r"Models/Models/YOLOv10Best.pt",
+    "YOLOv11.pt": r"Models/Models/YOLOv11Best.pt",
 }
 
 # Folders for storing detection results
@@ -432,9 +432,9 @@ yolov11_folder = 'yolov11'
 
 # Dictionary of model analytics images folder paths
 model_results_paths = {
-    "YOLOv8": r"D:\Data Science UTM\New Dashboard\rice\Models & Results\Yolo v8\Result",
-    "YOLOv10": r"D:\Data Science UTM\New Dashboard\rice\Models & Results\Yolo v10\Result",
-    "YOLOv11": r"D:\Data Science UTM\New Dashboard\rice\Models & Results\Yolo v11\Result",
+    "YOLOv8": r"Models_and_Results/Yolo_v8/Result",
+    "YOLOv10": r"Models_and_Results/Yolo_v10/Result",
+    "YOLOv11": r"Models_and_Results/Yolo_v11/Result",
 }
 
 # Ensure all folders are created once
