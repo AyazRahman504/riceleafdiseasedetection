@@ -599,19 +599,19 @@ elif page == "📷 Image Gallery":
     # List each image path and caption
     gallery_images = [
         {
-            "path": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/3.jpg",
+            "path": r"Models/Models/3.jpg",
             "title": "Bacterial Blight"
         },
         {
-            "path": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/5.jpg",
+            "path": r"Models/Models/5.jpg",
             "title": "Brown Spot"
         },
         {
-            "path": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/1.jpg",
+            "path": r"Models/Models/1.jpg",
             "title": "Rice Blast"
         },
         {
-            "path": r"D:/Data Science UTM/New Dashboard/rice/Models/Models/6.jpg",
+            "path": r"Models/Models/6.jpg",
             "title": "Healthy Leaf"
         },
     ]
