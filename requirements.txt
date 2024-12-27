@@ -9,3 +9,4 @@ ultralytics
 plotly==5.15.0
 streamlit-aggrid
 python-decouple
+torch
