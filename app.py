@@ -4,7 +4,6 @@ import os
 import seaborn as sns
 import cv2
 from sklearn.metrics import confusion_matrix
-from pathlib import Path
 import numpy as np
 from PIL import Image, ImageOps
 from ultralytics import YOLO
@@ -13,8 +12,7 @@ import plotly.express as px
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
-BASE_DIR = Path("/mount/src/riceleafdiseasedetection")  # Correct base directory
-# Debugging: Validate paths
+os.environ['STREAMLIT_SERVER_PORT'] = '8501'
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
 # -------------------------------------------------------------------
@@ -434,42 +432,11 @@ yolov11_folder = 'yolov11'
 
 # Dictionary of model analytics images folder paths
 model_results_paths = {
-    "YOLOv8": BASE_DIR / "Models_and_Results" / "Yolo_v8",
-    "YOLOv10": BASE_DIR / "Models_and_Results" / "Yolo_v10",
-    "YOLOv11": BASE_DIR / "Models_and_Results" / "Yolo_v11",
+    "YOLOv8": r"Models_and_Results/Yolo_v8",
+    "YOLOv10": r"Models_and_Results/Yolo_v10",
+    "YOLOv11": r"Models_and_Results/Yolo_v11",
 }
-def display_images_from_directory(directory):
-    if directory.exists() and directory.is_dir():
-        st.write(f"📂 Displaying images from: {directory}")
-        
-        # List only image files in the directory
-        images = list(directory.glob('*.*'))  # Matches all files
-        image_files = [f for f in images if f.suffix.lower() in {'.png', '.jpg', '.jpeg', '.gif'}]
-        
-        if image_files:
-            for image_file in image_files:
-                try:
-                    img = Image.open(image_file)
-                    st.image(img, caption=image_file.name, use_column_width=True)
-                except Exception as e:
-                    st.error(f"Error loading image {image_file.name}: {e}")
-        else:
-            st.write("No images found in this directory.")
-    else:
-        st.error(f"Directory {directory} does not exist!")
 
-# Debugging step: Check if paths are correct
-st.write(f"Base directory: {BASE_DIR}")
-for model, directory in model_results_paths.items():
-    st.write(f"{model} path: {directory} - Exists: {directory.exists()}")
-
-# Display images from all specified directories
-for model, directory in model_results_paths.items():
-    display_images_from_directory(directory)
-for model, path in model_results_paths.items():
-    st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
-    if os.path.exists(path):
-        st.write(f"Contents of {model} folder: {os.listdir(path)}")
 # Ensure all folders are created once
 for folder in [yolov8_folder, yolov10_folder, yolov11_folder]:
     create_folder(folder)
