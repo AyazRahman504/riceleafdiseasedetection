@@ -13,7 +13,7 @@ import plotly.express as px
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
-BASE_DIR = Path(__file__).parent 
+BASE_DIR = Path("/mount/src/riceleafdiseasedetection")  # Correct base directory
 # Debugging: Validate paths
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
