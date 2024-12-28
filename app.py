@@ -440,6 +440,8 @@ model_results_paths = {
 
 for model, path in model_results_paths.items():
     st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
+    if os.path.exists(path):
+        st.write(f"Contents of {model} folder: {os.listdir(path)}")
 # Ensure all folders are created once
 for folder in [yolov8_folder, yolov10_folder, yolov11_folder]:
     create_folder(folder)
