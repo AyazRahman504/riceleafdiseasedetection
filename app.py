@@ -4,7 +4,7 @@ import os
 import seaborn as sns
 import cv2
 from sklearn.metrics import confusion_matrix
-from pathlib import path
+from pathlib import Path
 import numpy as np
 from PIL import Image, ImageOps
 from ultralytics import YOLO
