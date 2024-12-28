@@ -14,8 +14,6 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
 BASE_DIR = os.getcwd()
 st.write(f"🗂️ Base Directory: {BASE_DIR}")
-for model, path in model_results_paths.items():
-    st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
 os.environ['STREAMLIT_SERVER_PORT'] = '8501'
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
@@ -440,7 +438,8 @@ model_results_paths = {
     "YOLOv10": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v10"),
     "YOLOv11": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v11"),
 }
-
+for model, path in model_results_paths.items():
+    st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
 # Ensure all folders are created once
 for folder in [yolov8_folder, yolov10_folder, yolov11_folder]:
     create_folder(folder)
