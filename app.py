@@ -548,29 +548,25 @@ elif page == "📊 Model Analytics":
     st.markdown("Below are the analytics images for each YOLO model.")
     
     st.subheader("YOLOv8 Model Analytics")
-    y8_images = load_images_from_folder(model_results_paths["YOLOv8"])
-    if not y8_images:
+    if not model_results_paths["YOLOv8"]:
         st.write("🚫 No YOLOv8 analytics images found.")
     else:
-        display_images_in_columns(y8_images)
+        display_images_in_columns(model_results_paths["YOLOv8"])
     
     st.markdown("---")  # horizontal divider
 
     st.subheader("YOLOv10 Model Analytics")
-    y10_images = load_images_from_folder(model_results_paths["YOLOv10"])
-    if not y10_images:
+    if not model_results_paths["YOLOv10"]:
         st.write("🚫 No YOLOv10 analytics images found.")
     else:
-        display_images_in_columns(y10_images)
+        display_images_in_columns(model_results_paths["YOLOv10"])
     
     st.markdown("---")  # horizontal divider
 
-    st.subheader("YOLOv11 Model Analytics")
-    y11_images = load_images_from_folder(model_results_paths["YOLOv11"])
-    if not y11_images:
+    if not model_results_paths["YOLOv11"]:
         st.write("🚫 No YOLOv11 analytics images found.")
     else:
-        display_images_in_columns(y11_images)
+        display_images_in_columns(model_results_paths["YOLOv11"])
 
 elif page == "📷 Image Gallery":
     st.title("📷 Image Gallery")
