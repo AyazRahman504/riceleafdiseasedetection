@@ -13,6 +13,9 @@ import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
 BASE_DIR = os.getcwd()
+st.write(f"🗂️ Base Directory: {BASE_DIR}")
+for model, path in model_results_paths.items():
+    st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
 os.environ['STREAMLIT_SERVER_PORT'] = '8501'
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
