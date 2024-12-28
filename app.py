@@ -13,16 +13,7 @@ import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
 BASE_DIR = os.getcwd()
-st.write(f"🗂️ Base Directory: {BASE_DIR}")
-model_results_paths = {
-    "YOLOv8": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v8"),
-    "YOLOv10": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v10"),
-    "YOLOv11": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v11"),
-}
-
 # Debugging: Validate paths
-for model, path in model_results_paths.items():
-    st.write(f"{model} Path: {path} - Exists: {os.path.exists(path)}")
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
 # -------------------------------------------------------------------
@@ -441,6 +432,11 @@ yolov10_folder = 'yolov10'
 yolov11_folder = 'yolov11'
 
 # Dictionary of model analytics images folder paths
+model_results_paths = {
+    "YOLOv8": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v8"),
+    "YOLOv10": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v10"),
+    "YOLOv11": os.path.join(BASE_DIR, "Models_and_Results/Yolo_v11"),
+}
 
 for model, path in model_results_paths.items():
     st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
