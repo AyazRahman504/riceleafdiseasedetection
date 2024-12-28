@@ -460,11 +460,11 @@ def display_images_from_directory(directory):
 
 # Debugging step: Check if paths are correct
 st.write(f"Base directory: {BASE_DIR}")
-for model, directory in image_dirs.items():
+for model, directory in model_results_paths.items():
     st.write(f"{model} path: {directory} - Exists: {directory.exists()}")
 
 # Display images from all specified directories
-for model, directory in image_dirs.items():
+for model, directory in model_results_paths.items():
     display_images_from_directory(directory)
 for model, path in model_results_paths.items():
     st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
