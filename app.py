@@ -13,7 +13,7 @@ import plotly.express as px
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import base64
-BASE_DIR = os.getcwd()
+BASE_DIR = Path(__file__).parent 
 # Debugging: Validate paths
 # -------------------------------------------------------------------
 # 0. PAGE CONFIG & GLOBAL STYLES
