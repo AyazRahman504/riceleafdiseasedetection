@@ -438,7 +438,34 @@ model_results_paths = {
     "YOLOv10": BASE_DIR / "Models_and_Results" / "Yolo_v10",
     "YOLOv11": BASE_DIR / "Models_and_Results" / "Yolo_v11",
 }
+def display_images_from_directory(directory):
+    if directory.exists() and directory.is_dir():
+        st.write(f"📂 Displaying images from: {directory}")
+        
+        # List only image files in the directory
+        images = list(directory.glob('*.*'))  # Matches all files
+        image_files = [f for f in images if f.suffix.lower() in {'.png', '.jpg', '.jpeg', '.gif'}]
+        
+        if image_files:
+            for image_file in image_files:
+                try:
+                    img = Image.open(image_file)
+                    st.image(img, caption=image_file.name, use_column_width=True)
+                except Exception as e:
+                    st.error(f"Error loading image {image_file.name}: {e}")
+        else:
+            st.write("No images found in this directory.")
+    else:
+        st.error(f"Directory {directory} does not exist!")
 
+# Debugging step: Check if paths are correct
+st.write(f"Base directory: {BASE_DIR}")
+for model, directory in image_dirs.items():
+    st.write(f"{model} path: {directory} - Exists: {directory.exists()}")
+
+# Display images from all specified directories
+for model, directory in image_dirs.items():
+    display_images_from_directory(directory)
 for model, path in model_results_paths.items():
     st.write(f"📂 {model} Path: {path} - Exists: {os.path.exists(path)}")
     if os.path.exists(path):
