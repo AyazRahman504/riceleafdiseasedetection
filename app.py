@@ -436,15 +436,14 @@ model_results_paths = {
         "Models_and_Results/Yolo_v8/image1.png",
         "Models_and_Results/Yolo_v8/image2.png",
         "Models_and_Results/Yolo_v8/image3.png",
-        "Models_and_Results/Yolo_v8/image4.png",
+        "Models_and_Results/Yolo_v8/image4.png"
         # Add more images for YOLOv8 here
     ],
     "YOLOv10": [
         "Models_and_Results/Yolo_v10/image1.png",
         "Models_and_Results/Yolo_v10/image2.png",
         "Models_and_Results/Yolo_v10/image3.png",
-        "Models_and_Results/Yolo_v10/image4.png",
-        "Models_and_Results/Yolo_v10/image5.png",
+        "Models_and_Results/Yolo_v10/image4.png"
         # Add more images for YOLOv10 here
     ],
     "YOLOv11": [
@@ -452,7 +451,6 @@ model_results_paths = {
         "Models_and_Results/Yolo_v11/image2.png",
         "Models_and_Results/Yolo_v11/image3.png",
         "Models_and_Results/Yolo_v11/image4.png",
-        "Models_and_Results/Yolo_v11/image5.png",
         # Add more images for YOLOv11 here
     ],
 }
