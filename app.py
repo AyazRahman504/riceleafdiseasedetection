@@ -432,33 +432,11 @@ yolov11_folder = 'yolov11'
 
 # Dictionary of model analytics images folder paths
 model_results_paths = {
-    "YOLOv8": [
-        "Models_and_Results/Yolo_v8/image1.png",
-        "Models_and_Results/Yolo_v8/image2.png",
-        "Models_and_Results/Yolo_v8/image3.png",
-        "Models_and_Results/Yolo_v8/image4.png"
-        # Add more images for YOLOv8 here
-    ],
-    "YOLOv10": [
-        "Models_and_Results/Yolo_v10/image1.png",
-        "Models_and_Results/Yolo_v10/image2.png",
-        "Models_and_Results/Yolo_v10/image3.png",
-        "Models_and_Results/Yolo_v10/image4.png"
-        # Add more images for YOLOv10 here
-    ],
-    "YOLOv11": [
-        "Models_and_Results/Yolo_v11/image1.png",
-        "Models_and_Results/Yolo_v11/image2.png",
-        "Models_and_Results/Yolo_v11/image3.png",
-        "Models_and_Results/Yolo_v11/image4.png",
-        # Add more images for YOLOv11 here
-    ],
+    "YOLOv8": r"Models_and_Results/Yolo_v8",
+    "YOLOv10": r"Models_and_Results/Yolo_v10",
+    "YOLOv11": r"Models_and_Results/Yolo_v11",
 }
-img_path = "Models_and_Results/Yolo_v8/image1.png"
-if os.path.exists(img_path):
-    st.image(img_path, use_container_width=True)
-else:
-    st.write(f"Error: {img_path} does not exist!")
+
 # Ensure all folders are created once
 for folder in [yolov8_folder, yolov10_folder, yolov11_folder]:
     create_folder(folder)
@@ -556,25 +534,29 @@ elif page == "📊 Model Analytics":
     st.markdown("Below are the analytics images for each YOLO model.")
     
     st.subheader("YOLOv8 Model Analytics")
-    if not model_results_paths["YOLOv8"]:
+    y8_images = load_images_from_folder(model_results_paths["YOLOv8"])
+    if not y8_images:
         st.write("🚫 No YOLOv8 analytics images found.")
     else:
-        display_images_in_columns(model_results_paths["YOLOv8"])
+        display_images_in_columns(y8_images)
     
     st.markdown("---")  # horizontal divider
 
     st.subheader("YOLOv10 Model Analytics")
-    if not model_results_paths["YOLOv10"]:
+    y10_images = load_images_from_folder(model_results_paths["YOLOv10"])
+    if not y10_images:
         st.write("🚫 No YOLOv10 analytics images found.")
     else:
-        display_images_in_columns(model_results_paths["YOLOv10"])
+        display_images_in_columns(y10_images)
     
     st.markdown("---")  # horizontal divider
 
-    if not model_results_paths["YOLOv11"]:
+    st.subheader("YOLOv11 Model Analytics")
+    y11_images = load_images_from_folder(model_results_paths["YOLOv11"])
+    if not y11_images:
         st.write("🚫 No YOLOv11 analytics images found.")
     else:
-        display_images_in_columns(model_results_paths["YOLOv11"])
+        display_images_in_columns(y11_images)
 
 elif page == "📷 Image Gallery":
     st.title("📷 Image Gallery")
