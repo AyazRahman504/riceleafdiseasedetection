@@ -454,7 +454,11 @@ model_results_paths = {
         # Add more images for YOLOv11 here
     ],
 }
-
+img_path = "Models_and_Results/Yolo_v8/image1.png"
+if os.path.exists(img_path):
+    st.image(img_path, use_container_width=True)
+else:
+    st.write(f"Error: {img_path} does not exist!")
 # Ensure all folders are created once
 for folder in [yolov8_folder, yolov10_folder, yolov11_folder]:
     create_folder(folder)
