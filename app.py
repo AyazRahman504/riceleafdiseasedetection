@@ -432,9 +432,23 @@ yolov11_folder = 'yolov11'
 
 # Dictionary of model analytics images folder paths
 model_results_paths = {
-    "YOLOv8": r"Models_and_Results/Yolo_v8",
-    "YOLOv10": r"Models_and_Results/Yolo_v10",
-    "YOLOv11": r"Models_and_Results/Yolo_v11",
+    "YOLOv8": [
+        "Models_and_Results/Yolo_v8/image1.png",
+        "Models_and_Results/Yolo_v8/image2.png",
+        "Models_and_Results/Yolo_v8/image3.png",
+        "Models_and_Results/Yolo_v8/image4.png",
+        # Add more images for YOLOv8 here
+    ],
+    "YOLOv10": [
+        "Models_and_Results/Yolo_v10/image1.png",
+        "Models_and_Results/Yolo_v10/image2.png",
+        # Add more images for YOLOv10 here
+    ],
+    "YOLOv11": [
+        "Models_and_Results/Yolo_v11/image1.png",
+        "Models_and_Results/Yolo_v11/image2.png",
+        # Add more images for YOLOv11 here
+    ],
 }
 
 # Ensure all folders are created once
