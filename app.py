@@ -682,18 +682,18 @@ elif page == "📈 Model Comparison":
     # Define precision data
     precisions = {
         "YOLOv8.pt": {
-            "Brown Spot": 0.872,
-            "Healthy Leaf": 0.944,
-            "Rice Blast": 0.842,
-            "Bacterial Blight": 0.863,
-            "All Classes": 0.880  # mAP@0.5 included separately
-        },
-        "YOLOv10.pt": {
             "Brown Spot": 0.906,
             "Healthy Leaf": 0.963,
             "Rice Blast": 0.851,
             "Bacterial Blight": 0.876,
-            "All Classes": 0.899
+            "All Classes": 0.899  # mAP@0.5 included separately
+        },
+        "YOLOv10.pt": {
+            "Brown Spot": 0.872,
+            "Healthy Leaf": 0.944,
+            "Rice Blast": 0.842,
+            "Bacterial Blight": 0.863,
+            "All Classes": 0.880
         },
         "YOLOv11.pt": {
             "Brown Spot": 0.918,
