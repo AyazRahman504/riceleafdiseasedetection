@@ -1,4 +1,4 @@
-import streamlit as st
+animport streamlit as st
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns
@@ -674,7 +674,7 @@ elif page == "📷 Image Gallery":
 elif page == "📈 Model Comparison":
     st.title("📈 Model Comparison")
     st.markdown("""
-    Compare the precision of different YOLO models for specific rice leaf diseases.
+    Compare the mean precision of different YOLO models for specific rice leaf diseases.
     Select two models and a disease to see a detailed comparison.
     Enjoy interactive and playful tools to explore the performance metrics!
     """)
@@ -682,33 +682,33 @@ elif page == "📈 Model Comparison":
     # Define precision data
     precisions = {
         "YOLOv8.pt": {
-            "Brown Spot": 0.89,
-            "Healthy Leaf": 0.96,
-            "Rice Blast": 0.87,
-            "Bacterial Blight": 0.88,
-            "All Classes": 0.875  # mAP@0.5 included separately
+            "Brown Spot": 0.872,
+            "Healthy Leaf": 0.944,
+            "Rice Blast": 0.842,
+            "Bacterial Blight": 0.863,
+            "All Classes": 0.880  # mAP@0.5 included separately
         },
         "YOLOv10.pt": {
-            "Brown Spot": 0.87,
-            "Healthy Leaf": 0.94,
-            "Rice Blast": 0.85,
-            "Bacterial Blight": 0.86,
-            "All Classes": 0.881
+            "Brown Spot": 0.906,
+            "Healthy Leaf": 0.963,
+            "Rice Blast": 0.851,
+            "Bacterial Blight": 0.876,
+            "All Classes": 0.899
         },
         "YOLOv11.pt": {
-            "Brown Spot": 0.91,
-            "Healthy Leaf": 0.98,
-            "Rice Blast": 0.90,
-            "Bacterial Blight": 0.91,
-            "All Classes": 0.925
+            "Brown Spot": 0.918,
+            "Healthy Leaf": 0.988,
+            "Rice Blast": 0.901,
+            "Bacterial Blight": 0.907,
+            "All Classes": 0.929
         }
     }
 
     # Define mAP@0.5 data for All Classes
     map_values = {
-        "YOLOv8.pt": 0.875,
-        "YOLOv10.pt": 0.881,
-        "YOLOv11.pt": 0.925
+        "YOLOv8.pt": 0.880,
+        "YOLOv10.pt": 0.899,
+        "YOLOv11.pt": 0.929
     }
 
     # Model selection
@@ -763,9 +763,9 @@ elif page == "📈 Model Comparison":
             st.markdown("### 🧮 Precision Differences")
             difference = precision1 - precision2
             difference_text = f"""
-            **{model1} Precision:** {precision1:.2f}  
-            **{model2} Precision:** {precision2:.2f}  
-            **Difference ({model1} - {model2}):** {difference:.2f}
+            **{model1} Precision:** {precision1:.3f}  
+            **{model2} Precision:** {precision2:.3f}  
+            **Difference ({model1} - {model2}):** {difference:.3f}
             """
             st.write(difference_text)
 
