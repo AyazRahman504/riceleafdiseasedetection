@@ -1,4 +1,4 @@
-animport streamlit as st
+import streamlit as st
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns
