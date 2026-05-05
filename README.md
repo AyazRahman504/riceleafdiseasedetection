@@ -109,6 +109,26 @@ The project includes an interactive dashboard that allows users to:
 - View bounding boxes and predictions  
 - Analyze model outputs  
 
+---
+
+## 🔍 Detection Samples
+
+Below are sample outputs from the trained YOLO models:
+
+### 🌱 Healthy Leaf Detection
+![Healthy Leaf](saved_images/Healthy leaf.jpg)
+
+### 🦠 Bacterial Blight Detection
+![Bacterial Blight](saved_images/Bacterial Blight.jpg)
+
+### 🍂 Brown Spot Detection
+![Brown Spot](saved_images/Brown Spot.jpg)
+
+### 🔥 Rice Blast Detection
+![Rice Blast](saved_images/Rice Blasts.jpg)
+
+---
+
 ### 📊 Dashboard Preview
 
 ![Dashboard](saved_images/Dashboard.jpg)
