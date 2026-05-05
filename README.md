@@ -108,3 +108,7 @@ The project includes an interactive dashboard that allows users to:
 - Perform real-time disease detection  
 - View bounding boxes and predictions  
 - Analyze model outputs  
+
+### 📊 Dashboard Preview
+
+![Dashboard](saved_images/Dashboard.jpg)
