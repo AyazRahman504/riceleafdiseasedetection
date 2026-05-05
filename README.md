@@ -116,16 +116,16 @@ The project includes an interactive dashboard that allows users to:
 Below are sample outputs from the trained YOLO models:
 
 ### 🌱 Healthy Leaf Detection
-![Healthy Leaf](saved_images/Healthy leaf.jpg)
+![Healthy Leaf](saved_images/Healthy_leaf.jpg)
 
 ### 🦠 Bacterial Blight Detection
-![Bacterial Blight](saved_images/Bacterial Blight.jpg)
+![Bacterial Blight](saved_images/Bacterial_Blight.jpg)
 
 ### 🍂 Brown Spot Detection
-![Brown Spot](saved_images/Brown Spot.jpg)
+![Brown Spot](saved_images/Brown_Spot.jpg)
 
 ### 🔥 Rice Blast Detection
-![Rice Blast](saved_images/Rice Blasts.jpg)
+![Rice Blast](saved_images/Rice_Blasts.jpg)
 
 ---
 
