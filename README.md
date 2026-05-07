@@ -107,7 +107,13 @@ The project includes an interactive dashboard that allows users to:
 - Upload rice leaf images  
 - Perform real-time disease detection  
 - View bounding boxes and predictions  
-- Analyze model outputs  
+- Analyze model outputs
+
+---
+
+### 📊 Dashboard Preview
+
+![Dashboard](saved_images/Dashboard.jpg)
 
 ---
 
@@ -126,9 +132,3 @@ Below are sample outputs from the trained YOLO models:
 
 ### 🔥 Rice Blast Detection
 ![Rice Blast](saved_images/Rice_Blasts.jpg)
-
----
-
-### 📊 Dashboard Preview
-
-![Dashboard](saved_images/Dashboard.jpg)
